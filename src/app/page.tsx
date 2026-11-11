@@ -1,7 +1,9 @@
 
-// import BooksPage from "./books/page";
+
+
 import BooksPage from "./books/page";
 import Banner from "./components/Banner/Banner";
+
 
 export default function Home() {
   return (
@@ -9,7 +11,7 @@ export default function Home() {
 
   <h2>Home page</h2>
    <Banner></Banner>
- <BooksPage></BooksPage>
+<BooksPage></BooksPage>
  </div>
   );
 }

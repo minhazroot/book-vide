@@ -1,12 +1,11 @@
-
 import Image from "next/image";
 import { TBook } from "@/app/type/books.type";
+import Link from "next/link";
 
 
-
-interface BookCardProps  {
+interface BookCardProps {
   book: TBook;
-};
+}
 
 const BookCard = ({ book }: BookCardProps) => {
   return (
@@ -61,6 +60,11 @@ const BookCard = ({ book }: BookCardProps) => {
       <div className="flex justify-between text-sm text-gray-400 mt-4">
         <span>{book.totalPages} Pages</span>
         <span>{book.yearOfPublishing}</span>
+      </div>
+      <div>
+        <Link href={`/books/${book.bookId}`}>
+          <button className="btn btn-wide">See Details</button>
+        </Link>
       </div>
     </div>
   );
