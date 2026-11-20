@@ -2,7 +2,6 @@ import Image from "next/image";
 import { TBook } from "@/app/type/books.type";
 import Link from "next/link";
 
-
 interface BookCardProps {
   book: TBook;
 }

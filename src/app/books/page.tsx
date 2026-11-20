@@ -14,10 +14,10 @@ const BooksPage = async () => {
   return (
     <div>
       <h2 className="text-5xl flex justify-center items-center mb-5  text-clip"> Books</h2>
+
       <div className="grid grid-cols-3 gap-5">
-        {Books.map((book:TBook) => (
-          <BookCard key={book.bookId} book={book}></BookCard>
-        ))}
+        {Books.map((book:TBook) => (<BookCard key={book.bookId} book={book}></BookCard>
+ ))}
       </div>
     </div>
   );

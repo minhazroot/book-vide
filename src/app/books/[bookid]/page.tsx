@@ -1,4 +1,6 @@
 
+import ReadButton from "@/app/components/BookRead/ReadButton";
+import WishListButton from "@/app/components/BookRead/WishListButton";
 import { TBook } from "@/app/type/books.type";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -112,13 +114,9 @@ const BookDetailsPage = async ({
 
           {/* Buttons */}
           <div className="flex gap-3 mt-8">
-            <button className="btn btn-outline px-8">
-              Read
-            </button>
+         <ReadButton book={book}></ReadButton>
 
-            <button className="btn bg-cyan-500 text-white border-none px-8">
-              Wishlist
-            </button>
+         <WishListButton book={book}></WishListButton>
           </div>
 
         </div>

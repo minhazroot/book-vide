@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
+import BooksProvider from "@/context/BooksContext";
+import { ToastContainer } from "react-toastify/unstyled";
 
 
 const geistSans = Geist({
@@ -27,11 +29,19 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
 
+   {/* step 7: Rape main root layout  Insit context  */}
+        <BooksProvider>
+
         <main>
           <NavBar></NavBar>
          
           {children}
+           <ToastContainer />
+           
         </main>
+       
+        </BooksProvider>
+
       </body>
     </html>
   );
